@@ -3,7 +3,6 @@ import { CiSearch } from "react-icons/ci";
 import Banner from '../../assets/images/Rectangle 1.jpg';
 const Header = () => {
     return (
-        <>
         <div>
         <div className="navbar bg-base-100">
             <div className="navbar-start">
@@ -46,7 +45,6 @@ const Header = () => {
             </div>
         </div>
         </div>
-        </>
     );
 };
 

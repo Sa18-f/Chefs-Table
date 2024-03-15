@@ -1,0 +1,57 @@
+[
+    {
+      "recipe_image": "https://i.ibb.co/K7NwVXS/chicken-prepared-sauce-served-with-lemon-slices.jpg",
+      "recipe_id": 1,
+      "recipe_name": "Chicken Teriyaki",
+      "short_description": "A delicious Japanese dish with tender chicken glazed in a sweet and savory teriyaki sauce.",
+      "ingredients": ["550 g chicken", "120 ml soy sauce", "200 g basil leaf", "400 g mushroom"],
+      "preparing_time": "30 min",
+      "calories": "320 calories"
+    },
+    {
+      "recipe_image": "https://i.ibb.co/rw9PHfz/pasta-plate-chopping-board-with-fork.jpg",
+      "recipe_id": 2,
+      "recipe_name": "Spaghetti Carbonara",
+      "short_description": "Classic Italian pasta dish featuring spaghetti tossed in a creamy sauce with crispy bacon and Parmesan cheese.",
+      "ingredients": ["400 g spaghetti", "200 g bacon", "4 eggs", "100 g Parmesan cheese"],
+      "preparing_time": "25 min",
+      "calories": "450 calories"
+    },
+    {
+      "recipe_image": "https://i.ibb.co/r0C7S3f/vegetable-ratatouille-frying-pan-wooden-table.jpg",
+      "recipe_id":3,
+      "recipe_name": "Vegetable Stir-Fry",
+      "short_description": "A healthy and colorful stir-fry featuring a variety of fresh vegetables cooked in a flavorful sauce.",
+      "ingredients": ["300 g mixed vegetables (bell peppers, carrots, broccoli, snow peas)", "150 g tofu", "50 ml soy sauce", "2 cloves garlic"],
+      "preparing_time": "20 min",
+      "calories": "250 calories"
+    },
+    {
+      "recipe_image": "https://i.ibb.co/zbFv5dj/side-view-caesar-salad-with-chicken-parmesan-cheese-white-bowl-wooden-board.jpg",
+      "recipe_id": 4,
+      "recipe_name": "Caesar Salad",
+      "short_description": "A classic salad with crisp romaine lettuce, crunchy croutons, tangy Caesar dressing, and grated Parmesan cheese.",
+      "ingredients": ["1 head romaine lettuce", "100 g croutons", "50 g Parmesan cheese", "50 ml Caesar dressing"],
+      "preparing_time": "15 min",
+      "calories": "200 calories"
+    },
+    {
+      "recipe_image": "https://i.ibb.co/vzMg5C2/front-view-tasty-vegetable-salad-inside-plate-blue-table.jpg",
+      "recipe_id": 5,
+      "recipe_name": "Vegetarian Chili",
+      "short_description": "Hearty and flavorful chili made with beans, vegetables, and spices, perfect for a cozy dinner.",
+      "ingredients": ["400 g kidney beans", "200 g black beans", "300 g diced tomatoes", "1 onion", "2 cloves garlic"],
+      "preparing_time": "35 min",
+      "calories": "300 calories"
+    },
+    {
+      "recipe_image": "https://i.ibb.co/MRPrGkQ/strawberry-smoothie-with-wooden-background.jpg",
+      "recipe_id": 6,
+      "recipe_name": "Mixed Berry Smoothie",
+      "short_description": "Refreshing smoothie packed with mixed berries, yogurt, and a hint of honey for natural sweetness.",
+      "ingredients": ["200 g mixed berries (strawberries, blueberries, raspberries)", "150 ml yogurt", "1 tablespoon honey"],
+      "preparing_time": "10 min",
+      "calories": "150 calories"
+    }
+  ]
+  
