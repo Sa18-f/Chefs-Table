@@ -40,7 +40,7 @@ const Header = () => {
             <div className='absolute text-center lg:top-[270px] lg:right-[480px] w-[1000px] mx-auto'>
                 <h1 className='text-6xl font-bold text-white'>Discover an exceptional cooking class tailored for you!</h1>
                 <p className='my-6 text-white text-lg'> Learn culinary skills, techniques, and recipes personalized to your preferences and Master dishes tailored to your tastes with expert guidance and hands-on practice in a supportive environment.</p>
-                <button className='rounded-[30px] bg-green-600 py-3 px-5 mt-4 text-xl'>Explore Now</button>
+                <button className='rounded-[30px] bg-green-400 py-3 px-5 mt-4 text-xl'>Explore Now</button>
                 <button className='rounded-[30px] bg-slate-300 py-3 px-4 ml-3 mt-4 text-xl'>Our Feedback</button>
             </div>
         </div>
