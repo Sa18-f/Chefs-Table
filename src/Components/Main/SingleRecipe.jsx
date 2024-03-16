@@ -3,7 +3,7 @@ import { SlFire } from "react-icons/sl";
 import PropTypes from 'prop-types';
 
 const SingleRecipe = ({ recipe, handleCookTable }) => {
-    console.log(handleCookTable);
+    // console.log(handleCookTable);
     const ingredientsCount = recipe.ingredients.length;
     return (
         <div className="card bg-base-100 shadow-xl">

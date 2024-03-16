@@ -14,7 +14,7 @@ function App() {
       .then(data => setRecipes(data))
   }, []);
   const handleCookTable = (r) => {
-    const isExist = cart.find((recipe) => recipe.id == r.id);
+    const isExist = cart.find((recipe) => recipe.recipe_id === r.recipe_id);
     if (!isExist) {
       setCart([...cart, r]);
     }
@@ -45,6 +45,7 @@ function App() {
             <table>
               <thead>
                 <tr>
+                  <th>Serial</th>
                   <th>Name</th>
                   <th>Time</th>
                   <th>Calories</th>
@@ -54,9 +55,11 @@ function App() {
                 {
                   cart.map((item, index) => (
                     <tr key={index}>
+                      <td>{index + 1}.</td>
                       <td>{item.recipe_name}</td>
                       <td>{item.preparing_time}</td>
                       <td>{item.calories}</td>
+                      <button className='rounded-[30px] bg-green-400 py-2 px-5 mt-4'>Preparing</button>
                     </tr>
                   ))
                 }
@@ -64,8 +67,8 @@ function App() {
             </table>
           </div>
         </div>
-        <ToastContainer />
       </section>
+      <ToastContainer />
     </>
   )
 }
