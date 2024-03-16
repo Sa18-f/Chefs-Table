@@ -20,16 +20,16 @@ const Header = () => {
                 <a className="btn btn-ghost text-3xl font-bold">Recipe Calories</a>
             </div>
             <div className="navbar-center hidden lg:flex">
-                <ul className="menu menu-horizontal px-1  gap-10 text-[15px]">
+                <ul className="menu menu-horizontal px-1  gap-10 text-[16px]">
                    <li>Home</li>
                    <li>Recipes</li>
                    <li>About</li>
                    <li>Search</li>
                 </ul>
             </div>
-            <div className="navbar-end">
-                <input className='rounded-3xl relative bg-[#150B2B0D] py-3 px-8' type="text" name="" id="" placeholder='Search'/>
-                <button className='text-xl absolute lg:right-[530px]'><CiSearch /></button>
+            <div className="navbar-end gap-3">
+                <input className='rounded-3xl relative bg-[#150B2B0D] py-3 px-10' type="text" name="" id="" placeholder='Search'/>
+                <button className='text-xl absolute lg:right-[545px]'><CiSearch /></button>
                 <a><img src={ProfileIcon} alt="" /></a>
             </div>
         </div>
@@ -37,9 +37,9 @@ const Header = () => {
             <div className='relative'>
              <img className='w-[1420px] mx-auto' src={Banner} alt="" />
             </div>
-            <div className='absolute text-center lg:top-[270px] lg:right-[480px] w-[1000px] mx-auto'>
-                <h1 className='text-6xl font-bold text-white'>Discover an exceptional cooking class tailored for you!</h1>
-                <p className='my-6 text-white text-lg'> Learn culinary skills, techniques, and recipes personalized to your preferences and Master dishes tailored to your tastes with expert guidance and hands-on practice in a supportive environment.</p>
+            <div className='absolute text-center lg:top-[270px] top-[120px] lg:right-[480px] lg:w-[1000px] mx-auto'>
+                <h1 className='lg:text-6xl text-2xl font-bold text-white'>Discover an exceptional cooking class tailored for you!</h1>
+                <p className='lg:my-6 my-2 text-white lg:text-lg'> Learn culinary skills, techniques, and recipes personalized to your preferences and Master dishes tailored to your tastes with expert guidance and hands-on practice in a supportive environment.</p>
                 <button className='rounded-[30px] bg-green-400 py-3 px-5 mt-4 text-xl'>Explore Now</button>
                 <button className='rounded-[30px] bg-slate-300 py-3 px-4 ml-3 mt-4 text-xl'>Our Feedback</button>
             </div>

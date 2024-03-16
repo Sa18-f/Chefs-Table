@@ -8,6 +8,7 @@ import 'react-toastify/dist/ReactToastify.css';
 function App() {
   const [recipes, setRecipes] = useState([]);
   const [cart, setCart] = useState([]);
+  const [currentlyCooking, setCurrentlyCooking] = useState([]);
   useEffect(() => {
     fetch('recipes.json')
       .then(res => res.json())
@@ -22,9 +23,28 @@ function App() {
       toast('This recipe is already exist');
     }
   }
-  const handleDelete = (id) =>{
+  const handleDelete = (id) => {
+    const itemToCook = cart.find(item => item.recipe_id === id);
+    setCurrentlyCooking([...currentlyCooking, itemToCook]);
     const newCart = cart.filter(item => item.recipe_id !== id);
     setCart(newCart);
+  }
+  const calculateTotalPreparationTime = () => {
+    let totalTime = 0;
+    currentlyCooking.forEach(recipe => {
+      const time = parseInt(recipe.preparing_time.split(" ")[0]);
+      totalTime += time;
+    });
+    return totalTime;
+  }
+
+  const calculateTotalCalories = () => {
+    let totalCalories = 0;
+    currentlyCooking.forEach(recipe => {
+      const calories = parseInt(recipe.calories.split(" ")[0]);
+      totalCalories += calories;
+    });
+    return totalCalories;
   }
   return (
     <>
@@ -45,10 +65,10 @@ function App() {
           </div>
           {/* list container */}
           <div className="card bg-base-100 shadow-xl col-span-2">
-            <h3 className="text-3xl font-semibold text-center border-b-2 border-black py-3">Want to cook:</h3>
+            <h3 className="text-3xl font-medium text-center border-b-2 border-black py-3">Want to cook: 0{cart.length}</h3>
             <table>
               <thead>
-                <tr>
+                <tr className='text-xl'>
                   <th></th>
                   <th>Name</th>
                   <th>Time</th>
@@ -58,7 +78,7 @@ function App() {
               <tbody>
                 {
                   cart.map((item, index) => (
-                    <tr key={index} style={{ background: '#28282808'}}>
+                    <tr key={index} style={{ background: '#28282808' }}>
                       <td>
                         <div style={{ padding: '30px', paddingBottom: '30px' }}>{index + 1}.</div>
                       </td>
@@ -72,13 +92,49 @@ function App() {
                         <div style={{ padding: '30px', paddingBottom: '30px' }}>{item.calories}</div>
                       </td>
                       <div style={{ paddingTop: '30px', paddingBottom: '30px' }}>
-                      <button onClick={() => handleDelete(item.recipe_id)} className='rounded-[30px] bg-green-400 py-2 px-5 mt-4'>Preparing</button>
+                        <button onClick={() => handleDelete(item.recipe_id)} className='rounded-[30px] bg-green-400 py-2 px-5 mt-4'>Preparing</button>
                       </div>
                     </tr>
                   ))
                 }
               </tbody>
             </table>
+            {/* currently cooking section */}
+            <h3 className="text-3xl font-medium text-center border-b-2 border-black py-3">Currently Cooking: 0{currentlyCooking.length}</h3>
+            <table>
+              <thead>
+                <tr className='text-xl'>
+                  <th></th>
+                  <th>Name</th>
+                  <th>Time</th>
+                  <th>Calories</th>
+                </tr>
+              </thead>
+              <tbody>
+                {
+                  currentlyCooking.map((item, index) => (
+                    <tr key={index} style={{ background: '#28282808' }}>
+                      <td>
+                        <div style={{ padding: '30px', paddingBottom: '30px' }}>{index + 1}.</div>
+                      </td>
+                      <td>
+                        <div style={{ padding: '30px', paddingBottom: '30px' }}>{item.recipe_name}</div>
+                      </td>
+                      <td>
+                        <div style={{ padding: '30px', paddingBottom: '30px' }}>{item.preparing_time}</div>
+                      </td>
+                      <td>
+                        <div style={{ padding: '30px', paddingBottom: '30px' }}>{item.calories}</div>
+                      </td>
+                    </tr>
+                  ))
+                }
+              </tbody>
+            </table>
+            <div className="text-end mt-2 p-2 border-t-2 border-black">
+              <p className='text-lg font-medium'>Total Preparation Time = {calculateTotalPreparationTime()} minutes</p>
+              <p className='text-lg font-medium my-2'>Total Calories = {calculateTotalCalories()} calories</p>
+            </div>
           </div>
         </div>
       </section>
