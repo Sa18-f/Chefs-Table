@@ -16,7 +16,7 @@ const SingleRecipe = ({ recipe, handleCookTable }) => {
                 <p className="text-[#878787]">{recipe.short_description}</p>
                 <div className="border-y-2 border-black py-4">
                     <p>Ingredients: {ingredientsCount}</p>
-                    <ul>
+                    <ul className="list-disc pl-6">
                         {recipe.ingredients.map((ingredient, index) => (
                             <li key={index} className="text-[#878787] my-2"> {ingredient}</li>
                         ))}

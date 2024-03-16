@@ -22,6 +22,10 @@ function App() {
       toast('This recipe is already exist');
     }
   }
+  const handleDelete = (id) =>{
+    const newCart = cart.filter(item => item.recipe_id !== id);
+    setCart(newCart);
+  }
   return (
     <>
       <section className='mx-auto max-w-[1440px]'>
@@ -45,7 +49,7 @@ function App() {
             <table>
               <thead>
                 <tr>
-                  <th>Serial</th>
+                  <th></th>
                   <th>Name</th>
                   <th>Time</th>
                   <th>Calories</th>
@@ -54,12 +58,22 @@ function App() {
               <tbody>
                 {
                   cart.map((item, index) => (
-                    <tr key={index}>
-                      <td>{index + 1}.</td>
-                      <td>{item.recipe_name}</td>
-                      <td>{item.preparing_time}</td>
-                      <td>{item.calories}</td>
-                      <button className='rounded-[30px] bg-green-400 py-2 px-5 mt-4'>Preparing</button>
+                    <tr key={index} style={{ background: '#28282808'}}>
+                      <td>
+                        <div style={{ padding: '30px', paddingBottom: '30px' }}>{index + 1}.</div>
+                      </td>
+                      <td>
+                        <div style={{ padding: '30px', paddingBottom: '30px' }}>{item.recipe_name}</div>
+                      </td>
+                      <td>
+                        <div style={{ padding: '30px', paddingBottom: '30px' }}>{item.preparing_time}</div>
+                      </td>
+                      <td>
+                        <div style={{ padding: '30px', paddingBottom: '30px' }}>{item.calories}</div>
+                      </td>
+                      <div style={{ paddingTop: '30px', paddingBottom: '30px' }}>
+                      <button onClick={() => handleDelete(item.recipe_id)} className='rounded-[30px] bg-green-400 py-2 px-5 mt-4'>Preparing</button>
+                      </div>
                     </tr>
                   ))
                 }
