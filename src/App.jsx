@@ -56,15 +56,15 @@ function App() {
           <h1 className='text-6xl font-bold'>Our Recipes</h1>
           <p className="my-6 text-lg">Savor our grilled salmon with citrus glaze, served on jasmine rice with seasonal vegetables. <br /> A culinary delight awaits at our restaurant.</p>
         </div>
-        <div className="grid grid-cols-5 gap-5 my-12">
+        <div className="grid lg:grid-cols-5 grid-cols-1 gap-5 my-12">
           {/* card container */}
-          <div className="col-span-3 grid grid-cols-2 gap-8">
+          <div className="lg:col-span-3 grid lg:grid-cols-2 gap-8">
             {
               recipes.map((recipe, index) => <SingleRecipe key={index} recipe={recipe} handleCookTable={handleCookTable}></SingleRecipe>)
             }
           </div>
           {/* list container */}
-          <div className="card bg-base-100 shadow-xl col-span-2">
+          <div className="card bg-base-100 shadow-xl lg:col-span-2">
             <h3 className="text-3xl font-medium text-center border-b-2 border-black py-3">Want to cook: 0{cart.length}</h3>
             <table>
               <thead>

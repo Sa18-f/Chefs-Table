@@ -35,13 +35,13 @@ const Header = () => {
         </div>
         <div className='my-10'>
             <div className='relative'>
-             <img className='w-[1420px] mx-auto' src={Banner} alt="" />
+             <img className='w-[1420px] h-[250px] lg:h-[630px] mx-auto' src={Banner} alt="" />
             </div>
             <div className='absolute text-center lg:top-[270px] top-[120px] lg:right-[480px] lg:w-[1000px] mx-auto'>
                 <h1 className='lg:text-6xl text-2xl font-bold text-white'>Discover an exceptional cooking class tailored for you!</h1>
-                <p className='lg:my-6 my-2 text-white lg:text-lg'> Learn culinary skills, techniques, and recipes personalized to your preferences and Master dishes tailored to your tastes with expert guidance and hands-on practice in a supportive environment.</p>
-                <button className='rounded-[30px] bg-green-400 py-3 px-5 mt-4 text-xl'>Explore Now</button>
-                <button className='rounded-[30px] bg-slate-300 py-3 px-4 ml-3 mt-4 text-xl'>Our Feedback</button>
+                <p className='lg:my-6 my-2 text-sm text-white lg:text-lg'> Learn culinary skills, techniques, and recipes personalized to your preferences and Master dishes tailored to your tastes with expert guidance and hands-on practice in a supportive environment.</p>
+                <button className='rounded-[30px] bg-green-400 py-3 px-5 lg:mt-4 text-xl'>Explore Now</button>
+                <button className='rounded-[30px] bg-slate-300 py-3 px-4 ml-3 lg:mt-4 text-xl'>Our Feedback</button>
             </div>
         </div>
         </div>
